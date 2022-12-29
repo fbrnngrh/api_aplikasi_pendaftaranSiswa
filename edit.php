@@ -8,8 +8,11 @@ $nama = trim($data['nama']);
 $alamat_siswa = trim($data['alamat_siswa']);
 $pendidikan_terakhir = trim($data['pendidikan_terakhir']);
 $no_telp = trim($data['no_telp']);
+$tgl_lahir = trim($data['tgl_lahir']);
+$nama_bapak = trim($data['nama_bapak']);
+$nama_ibu = trim($data['nama_ibu']);
 
-$query = mysqli_query($koneksi, "UPDATE siswa SET nama='$nama', alamat_siswa='$alamat_siswa', pendidikan_terakhir='$pendidikan_terakhir', no_telp='$no_telp' WHERE nis='$nis'");
+$query = mysqli_query($koneksi, "UPDATE siswa SET nama='$nama', alamat_siswa='$alamat_siswa', pendidikan_terakhir='$pendidikan_terakhir', no_telp='$no_telp', tgl_lahir='$tgl_lahir', nama_bapak='$nama_bapak',nama_ibu='$nama_ibu' WHERE nis='$nis'");
 // if($query){
 //   http_response_code(201);
 //   $pesan['status'] = 'success';

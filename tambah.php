@@ -10,9 +10,12 @@ $nama = trim($data['nama']);
 $alamat_siswa = trim($data['alamat_siswa']);
 $pendidikan_terakhir = trim($data['pendidikan_terakhir']);
 $no_telp = trim($data['no_telp']);
+$tgl_lahir = trim($data['tgl_lahir']);
+$nama_bapak = trim($data['nama_bapak']);
+$nama_ibu = trim($data['nama_ibu']);
 
-  if($nis != '' && $nama != '' && $alamat_siswa != '' && $pendidikan_terakhir != '' && $no_telp != ''){
-    $query = mysqli_query($koneksi, "insert into siswa(nis,nama,alamat_siswa,pendidikan_terakhir,no_telp) values('$nis','$nama','$alamat_siswa','$pendidikan_terakhir','$no_telp')");
+  if($nis != '' && $nama != '' && $alamat_siswa != '' && $pendidikan_terakhir != '' && $no_telp != ''&& $tgl_lahir != '' && $nama_bapak != '' && $nama_ibu != ''){
+    $query = mysqli_query($koneksi, "insert into siswa(nis,nama,alamat_siswa,pendidikan_terakhir,no_telp,tgl_lahir,nama_bapak,nama_ibu) values('$nis','$nama','$alamat_siswa','$pendidikan_terakhir','$no_telp','$tgl_lahir','$nama_bapak','$nama_ibu')");
   }else{
     $query = mysqli_query($koneksi, "delete from siswa where nis='$nis'");
   }
